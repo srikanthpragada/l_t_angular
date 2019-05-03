@@ -1,0 +1,15 @@
+
+<h3> {{title}} </h3>
+<h4> {{trainer | uppercase }}</h4>
+
+<h5>Topics</h5>
+<ul>
+  <li *ngFor="let topic of topics">
+     {{topic}} 
+     <button (click)="removeTopic(topic)">Delete</button>
+  </li>
+</ul>
+
+New Topic : <input type="text" #topic />
+<button (click)="addTopic(topic.value)">Add</button>
+<button (click)="clearTopics()">Clear All</button>
