@@ -1,0 +1,31 @@
+<style>
+     .bright {color:orange}
+</style>
+<h2>Structural directives</h2>
+
+<h3 *ngIf="etype != 'p'; else testers">
+     Only for programmers!
+</h3>
+
+<ng-template #testers>
+  <h5>Only for testers!</h5>
+</ng-template>
+
+<p></p>
+
+<div *ngIf="etype == 'p'; then programmer; else tester">
+</div>
+
+<ng-template #programmer>
+        <h5>Only for Programmers!</h5>
+</ng-template>
+
+<ng-template #tester>
+     <h5>Only for testers!</h5>
+</ng-template>
+
+
+<div *ngFor="let l of langs;let i = index; let odd = odd; let last = last">
+    <div [class.bright]="odd">  {{i}} - {{l}}  </div>
+    <hr *ngIf="last"/>
+</div>

@@ -1,0 +1,31 @@
+
+<style>
+      .huge { font-size:30pt; }
+      .bright { font-weight: bold}
+</style>
+<h1>Bindings Demo</h1>
+
+<!-- Property Binding -->
+<img [src]="photoUrl"/>
+<h2 [innerHTML]="'Heading2'"></h2>
+<p></p>
+
+<!-- Attribute Binding -->
+<input type="button"  [attr.value]="cmdstr" />
+
+<!-- Event Binding -->
+<div (mousemove)="showMouse($event)">This is a simple DIV</div>
+
+<!-- Class binding -->
+<div [class.huge]="big" [class.bright]="bold">Class binding demo</div>
+
+<button (click)="toggleBig()">Toggle Big</button>
+
+<!-- Style binding -->
+<div [style.color]="color">Style binding demo</div>
+
+<!-- ngClass Directive -->
+<input (click)="1 == 1" type="checkbox" #bold  >Bold  
+<input (click)="1 == 1" type="checkbox"  #huge >Huge
+
+<div [ngClass]="{'huge' : huge.checked , 'bright' : bold.checked}">ngClass Demo</div>

@@ -1,15 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CourseComponent } from './course/course.component';
+import { UseStackComponent } from './services/usestack.component';
+import { StackService } from './services/stack.service';
+
+
 
 @NgModule({
   declarations: [
-    CourseComponent
+     UseStackComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [CourseComponent]
+  bootstrap: [UseStackComponent]
 })
 export class AppModule { }
