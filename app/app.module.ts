@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UseStackComponent } from './services/usestack.component';
-import { StackService } from './services/stack.service';
-
+import { RLoginComponent } from './forms/rlogin.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BooksComponent } from './http/books.component';
+import { CountriesComponent } from './http/countries.component';
 
 
 @NgModule({
   declarations: [
-     UseStackComponent
+      CountriesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
-  bootstrap: [UseStackComponent]
+  bootstrap: [CountriesComponent]
 })
 export class AppModule { }
